@@ -77,12 +77,13 @@ form label:nth-child(even) {
 }
 
 label {
-    display: inline-block;
+    display: block;
     padding: 15px 0px 15px 17px;
-    width: 780px;
+    width: 772px;
     color: #fff;
     font-family: Arial;
-
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 input[type="checkbox"] {
