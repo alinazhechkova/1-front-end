@@ -167,6 +167,7 @@ ul li div {
 
 li {
     border: 3px solid white;
+    box-sizing: border-box;
 }
 
 ul {
