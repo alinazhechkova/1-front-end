@@ -4,7 +4,45 @@
 }
 
 body {
-    border: 23px solid white;
+    padding: 23px;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #fff;
+    position: fixed;
+}
+
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 23px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 23px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
 }
 
 .container {
@@ -82,9 +120,12 @@ label {
     width: 772px;
     color: #fff;
     font-family: Arial;
-    border-bottom: 4px solid transparent;
+    <<<<<<< HEAD border-bottom: 4px solid transparent;
     border-top: 4px solid transparent;
 
+    =======border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    >>>>>>>hw4_zhechkova_alina
 }
 
 input[type="checkbox"] {
@@ -108,7 +149,7 @@ input:checked+label::before {
     display: inline-block;
 }
 
-label[for="pickle"]::after {
+<<<<<<< HEAD label[for="pickle"]::after {
     content: '(for the next lessons about CSS)';
 }
 
@@ -129,17 +170,26 @@ label[for="sake"]::after {
 }
 
 label::after {
-    color: #b9c6d6;
-    font-size: 13px;
-    font-family: sans-serif;
-}
+    =======.form small::before {
+        content: '(';
+    }
 
-.btn {
-    background-color: #4a4f56;
-    color: #eb7e7f;
-    border: none;
-    padding: 24px 0;
-    width: 800px;
-    margin-top: 40px;
-    font-size: 20px;
-}
+    .form small::after {
+        content: ')';
+    }
+
+    .form small {
+        >>>>>>>hw4_zhechkova_alina color: #b9c6d6;
+        font-size: 13px;
+        font-family: sans-serif;
+    }
+
+    .btn {
+        background-color: #4a4f56;
+        color: #eb7e7f;
+        border: none;
+        padding: 24px 0;
+        width: 800px;
+        margin-top: 40px;
+        font-size: 20px;
+    }
