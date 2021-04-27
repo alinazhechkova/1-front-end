@@ -120,12 +120,8 @@ label {
     width: 772px;
     color: #fff;
     font-family: Arial;
-    <<<<<<< HEAD border-bottom: 4px solid transparent;
     border-top: 4px solid transparent;
-
-    =======border-top: 4px solid transparent;
     border-bottom: 4px solid transparent;
-    >>>>>>>hw4_zhechkova_alina
 }
 
 input[type="checkbox"] {
