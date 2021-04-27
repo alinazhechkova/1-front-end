@@ -4,7 +4,45 @@
 }
 
 body {
-    border: 23px solid white;
+    padding: 23px;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #fff;
+    position: fixed;
+}
+
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 23px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 23px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
 }
 
 .container {
@@ -107,27 +145,15 @@ input:checked+label::before {
     display: inline-block;
 }
 
-label[for="pickle"]::after {
-    content: '(for the next lessons about CSS)';
+.form small::before {
+    content: '(';
 }
 
-label[for="apple"]::after {
-    content: '(for more CSS manipulations)';
+.form small::after {
+    content: ')';
 }
 
-label[for="orange"]::after {
-    content: '(because they are awesome)';
-}
-
-label[for="plate"]::after {
-    content: '(hm... they always disappear)';
-}
-
-label[for="sake"]::after {
-    content: '(for my friends)';
-}
-
-label::after {
+.form small {
     color: #b9c6d6;
     font-size: 13px;
     font-family: sans-serif;
