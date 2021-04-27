@@ -145,47 +145,26 @@ input:checked+label::before {
     display: inline-block;
 }
 
-<<<<<<< HEAD label[for="pickle"]::after {
-    content: '(for the next lessons about CSS)';
+.form small::before {
+    content: '(';
 }
 
-label[for="apple"]::after {
-    content: '(for more CSS manipulations)';
+.form small::after {
+    content: ')';
 }
 
-label[for="orange"]::after {
-    content: '(because they are awesome)';
+.form small {
+    color: #b9c6d6;
+    font-size: 13px;
+    font-family: sans-serif;
 }
 
-label[for="plate"]::after {
-    content: '(hm... they always disappear)';
+.btn {
+    background-color: #4a4f56;
+    color: #eb7e7f;
+    border: none;
+    padding: 24px 0;
+    width: 800px;
+    margin-top: 40px;
+    font-size: 20px;
 }
-
-label[for="sake"]::after {
-    content: '(for my friends)';
-}
-
-label::after {
-    =======.form small::before {
-        content: '(';
-    }
-
-    .form small::after {
-        content: ')';
-    }
-
-    .form small {
-        >>>>>>>hw4_zhechkova_alina color: #b9c6d6;
-        font-size: 13px;
-        font-family: sans-serif;
-    }
-
-    .btn {
-        background-color: #4a4f56;
-        color: #eb7e7f;
-        border: none;
-        padding: 24px 0;
-        width: 800px;
-        margin-top: 40px;
-        font-size: 20px;
-    }
