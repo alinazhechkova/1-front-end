@@ -3,7 +3,6 @@
     margin: 0;
 }
 
-
 body {
     padding: 24px;
 }
@@ -87,6 +86,7 @@ h1 {
 .list li {
     display: inline-block;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .lisbon {
@@ -156,6 +156,7 @@ h1 {
 .sydney {
     background-color: #666699;
 }
+
 
 li div,
 ul li div {
