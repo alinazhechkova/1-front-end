@@ -1,8 +1,10 @@
+@include grid();
+
 .page {
     font-family: $default-font;
 }
 
-.team {
+.container {
     max-width: $container-width;
     margin: 0 auto;
     padding: $default-gap;
