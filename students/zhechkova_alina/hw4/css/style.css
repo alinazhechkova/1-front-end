@@ -4,45 +4,10 @@
 }
 
 body {
-    padding: 23px;
-}
-
-#top,
-#bottom,
-#left,
-#right {
-    background: #fff;
-    position: fixed;
-}
-
-#left,
-#right {
-    top: 0;
-    bottom: 0;
-    width: 23px;
-}
-
-#left {
-    left: 0;
-}
-
-#right {
-    right: 0;
-}
-
-#top,
-#bottom {
-    left: 0;
-    right: 0;
-    height: 23px;
-}
-
-#top {
-    top: 0;
-}
-
-#bottom {
-    bottom: 0;
+    border: 23px solid #fff;
+    height: 100vh;
+    min-height: 800px;
+    background: #3b3f45;
 }
 
 .container {
@@ -70,7 +35,6 @@ h1 span {
 }
 
 footer {
-    background-color: #3b3f45;
     font-family: 'Trebuchet MS', Trebuchet, Arial, sans-serif;
     color: #eb7e7f;
     text-align: center;
