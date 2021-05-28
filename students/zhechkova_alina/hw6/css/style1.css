@@ -21,10 +21,6 @@ body {
     text-align: center;
 }
 
-.blog a {
-    text-decoration: none;
-}
-
 .blog h2 {
     font-size: 90px;
     padding-bottom: 23px;
@@ -95,11 +91,13 @@ img {
     position: absolute;
     z-index: 1;
     left: 0;
+
 }
 
 .title a {
     color: white;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .date {
