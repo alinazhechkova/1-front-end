@@ -93,7 +93,7 @@ function getTimeFormat() {
 function formatTime(x) {
     let result = x;
     if (x < 10) {
-        result = 0 + x;
+        result = '0' + x;
     }
     return result;
 }
@@ -147,8 +147,9 @@ function getNumber(number) {
     let num2 = max;
     let tmpNum = 0;
     let answer = '';
+
     while (answer !== '==') {
-        tmpNum = ~~((num1 + num2) / 2)
+        tmpNum = ~~((num1 + num2) / 2);
         answer = prompt(`Ваше число ${tmpNum}? Равно: ==, больше: > , меньше: <`);
         if (answer === '==') {
             break
