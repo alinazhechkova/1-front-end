@@ -21,5 +21,6 @@ img {
     object-fit: contain;
     object-position: center;
     margin: 0;
+    background: none;
 }
 </style>

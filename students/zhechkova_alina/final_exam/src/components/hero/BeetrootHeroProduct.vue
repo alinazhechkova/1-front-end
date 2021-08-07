@@ -1,22 +1,12 @@
 <template>
     <div class="beetroot-hero-product">
         <div class="hero-product">
-            <div class="hero-product__info">
-                <beetroot-labels
-                    :product="product"
-                    class="hero-product__labels"
-                />
-                <p class="hero-product__gender">
-                    <strong>{{ product.gender }}</strong
-                    >'s Watches
-                </p>
-            </div>
             <div class="hero-img">
                 <beetroot-image
                     :src="product.img"
                     :alt="product.name"
                     :title="product.name"
-                    class="hero-image rounded img-thumbnail float-start"
+                    class="hero-image"
                 />
             </div>
 
@@ -43,11 +33,10 @@
 </template>
 <script>
 import { mapActions } from "vuex";
-import BeetrootLabels from "./BeetrootLabels.vue";
 import BeetrootImage from "../catalog/BeetrootImage.vue";
 import BeetrootPrice from "../catalog/BeetrootPrice.vue";
 export default {
-    components: { BeetrootPrice, BeetrootImage, BeetrootLabels },
+    components: { BeetrootPrice, BeetrootImage },
     name: "beetroot-hero-product",
     props: {
         product: {
@@ -139,7 +128,6 @@ export default {
     }
     &__price {
         font-size: 50px;
-        margin-left: -50%;
         margin-top: 10px;
         margin-bottom: 20px;
         @media screen and (max-width: 1200px) {
@@ -229,24 +217,25 @@ export default {
 }
 .hero-img {
     height: 270px;
+    transform: rotate(15deg);
     &::before {
-        height: 430px;
-        width: 430px;
+        height: 400px;
+        width: 400px;
         content: "";
         display: block;
         position: absolute;
         background-color: #fff;
         z-index: -1;
-        margin: -95px;
+        margin: -54px 68px;
         border-radius: 50%;
         @media screen and (max-width: 1200px) {
-            height: 450px;
-            width: 450px;
+            height: 350px;
+            width: 350px;
             margin: -80px -115px;
         }
         @media screen and (max-width: 990px) {
-            height: 350px;
-            width: 350px;
+            height: 300px;
+            width: 300px;
             margin: -55px -84px;
         }
         @media screen and (max-width: 768px) {

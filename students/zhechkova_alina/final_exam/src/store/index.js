@@ -23,6 +23,9 @@ export default new Vuex.Store({
     setCart(state, products) {
       state.cart = products
     },
+    emptyCart(state) {
+      state.cart = [];
+    },
     changeQty(state, options) {
       const {
         productIndex,
@@ -37,6 +40,14 @@ export default new Vuex.Store({
     }
   },
   actions: {
+
+    async emptyCart({
+      commit
+    }) {
+      const url = host + '/api/cart/';
+      await request(url, "DELETE");
+      commit("emptyCart")
+    },
     async setProduct({
       commit
     }) {

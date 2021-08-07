@@ -15,26 +15,29 @@
             <span class="open-brand__span"></span>
         </button>
         <ul class="catalog__brands" @click="filter">
-            <li class="brand fairfield active" ref="Fairfield">Fairfield</li>
-            <li class="brand expedition" ref="Expedition">Expedition</li>
-            <li class="brand ironman" ref="Ironman">Ironman</li>
-            <li class="brand originals" ref="Originals">Originals</li>
+            <li class="brand newBalance active" ref="NewBalance">
+                New Balance
+            </li>
+            <li class="brand asics" ref="Asics">ASICS</li>
+            <li class="brand nike" ref="Nike">Nike</li>
+            <li class="brand adidas" ref="Adidas">Adidas</li>
         </ul>
         <div class="catalog__brand-info">
-            <template v-if="currentBrand === 'Fairfield'">
+            <template v-if="currentBrand === 'newBalance'">
                 <div class="brand__image-info">
-                    <img src="../../assets/fairfield.jpg" alt="fairfield" />
+                    <img src="../../assets/fairfield.jpg" alt="new balance" />
                 </div>
                 <div class="brand__content">
-                    <strong class="brand__name">{{ currentBrand }}</strong>
+                    <strong class="brand__name">New Balance</strong>
 
                     <p class="brand__intro">
-                        A sofisticated watch design with understated elegance.
+                        New Balance Athletics runs on its everyman (and
+                        everywoman) appeal
                     </p>
                     <button class="brand__btn">Browse</button>
                 </div>
             </template>
-            <template v-if="currentBrand === 'Expedition'">
+            <template v-if="currentBrand === 'ASICS'">
                 <div class="brand__image-info">
                     <img src="../../assets/expedition.jpg" alt="expedition" />
                 </div>
@@ -42,35 +45,35 @@
                     <strong class="brand__name">{{ currentBrand }}</strong>
 
                     <p class="brand__intro">
-                        Find uniquely crafted, classic and rugged outdoor
-                        watches.
+                        Designed to deliver improved cushioning.
                     </p>
                     <button class="brand__btn">Browse</button>
                 </div>
             </template>
-            <template v-if="currentBrand === 'Ironman'">
+            <template v-if="currentBrand === 'Nike'">
                 <div class="brand__image-info">
-                    <img src="../../assets/ironman.jpg" alt="ironman" />
+                    <img src="../../assets/ironman.jpg" alt="nike" />
                 </div>
                 <div class="brand__content">
                     <strong class="brand__name">{{ currentBrand }}</strong>
 
                     <p class="brand__intro">
-                        The undisputed favorite in sport watches crosses nearly
-                        every finish line in the world.
+                        Nike delivers innovative products, experiences and
+                        services to inspire athletes.
                     </p>
                     <button class="brand__btn">Browse</button>
                 </div>
             </template>
-            <template v-if="currentBrand === 'Originals'">
+            <template v-if="currentBrand === 'Adidas'">
                 <div class="brand__image-info">
-                    <img src="../../assets/originals.jpg" alt="originals" />
+                    <img src="../../assets/originals.jpg" alt="adidas" />
                 </div>
                 <div class="brand__content">
                     <strong class="brand__name">{{ currentBrand }}</strong>
 
                     <p class="brand__intro">
-                        A sofisticated watch design with understated elegance.
+                        Adidas designs, develops, produces, and markets athletic
+                        and leisure sports equipment.
                     </p>
                     <button class="brand__btn">Browse</button>
                 </div>
@@ -107,7 +110,7 @@ export default {
     data: () => {
         return {
             sortedProducts: [],
-            currentBrand: "Fairfield",
+            currentBrand: "newBalance",
             options: {
                 slidesToShow: 3,
                 slidesToScroll: 1,
@@ -148,39 +151,41 @@ export default {
         sortByBrand(brand) {
             this.sortedProducts = [];
             let vm = this;
+
             vm.productList.map(function (item) {
                 if (item.brand === brand) {
                     vm.sortedProducts.push(item);
                 }
             });
+            return this.sortedProducts;
         },
         filter(e) {
             e.preventDefault();
             const brands = document.querySelectorAll(".brand");
             brands.forEach((item) => item.classList.remove("active"));
             e.target.classList.add("active");
-            if (e.target.classList.contains("fairfield")) {
+            if (e.target.classList.contains("newBalance")) {
                 console.log(this.currentBrand);
-                this.currentBrand = "Fairfield";
-                this.sortByBrand("Fairfield");
+                this.currentBrand = "newBalance";
+                this.sortByBrand("New Balance");
                 return;
             }
-            if (e.target.classList.contains("expedition")) {
+            if (e.target.classList.contains("asics")) {
                 console.log(this.currentBrand);
-                this.currentBrand = "Expedition";
-                this.sortByBrand("Expedition");
+                this.currentBrand = "ASICS";
+                this.sortByBrand("ASICS");
                 return;
             }
-            if (e.target.classList.contains("ironman")) {
+            if (e.target.classList.contains("nike")) {
                 console.log(this.currentBrand);
-                this.currentBrand = "Ironman";
-                this.sortByBrand("Ironman");
+                this.currentBrand = "Nike";
+                this.sortByBrand("Nike");
                 return;
             }
-            if (e.target.classList.contains("originals")) {
+            if (e.target.classList.contains("adidas")) {
                 console.log(this.currentBrand);
-                this.currentBrand = "Originals";
-                this.sortByBrand("Originals");
+                this.currentBrand = "Adidas";
+                this.sortByBrand("Adidas");
                 return;
             }
             return;
@@ -193,10 +198,12 @@ export default {
             return [...new Set(this.sortedProducts)];
         },
     },
+    mounted() {
+        this.sortByBrand("New Balance");
+    },
 
     created() {
         this.setProduct();
-        this.sortByBrand();
     },
 };
 </script>

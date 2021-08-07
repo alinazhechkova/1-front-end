@@ -6,7 +6,7 @@
                     <span class="catalog__subtitle explore__subtitle"
                         >Explore</span
                     >
-                    Watches
+                    Shoes
                 </h2>
                 <router-link to="/all" class="explore__btn details"
                     ><span class="details__line explore__span"

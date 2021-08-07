@@ -6,12 +6,7 @@
                     :src="product.img"
                     :alt="product.name"
                     :title="product.name"
-                    class="
-                        rounded
-                        img-thumbnail
-                        float-start
-                        beetroot-cart-product__img
-                    "
+                    class="product__img"
                 />
             </div>
             <strong class="product__title">{{ product.name }}</strong>
@@ -83,23 +78,53 @@ export default {
         position: absolute;
         display: none;
     }
+    &__img {
+        height: 150px;
+        transform: rotate(15deg);
+        &::before {
+            height: 150px;
+            width: 150px;
+            content: "";
+            display: block;
+            position: absolute;
+            background-color: #ecebf0;
+            z-index: -1;
+            border-radius: 50%;
+            @media screen and (max-width: 1200px) {
+                height: 350px;
+                width: 350px;
+                margin: -80px -115px;
+            }
+            @media screen and (max-width: 990px) {
+                height: 300px;
+                width: 300px;
+                margin: -55px -84px;
+            }
+            @media screen and (max-width: 768px) {
+                height: 250px;
+                width: 250px;
+                margin: -27px -39px;
+            }
+        }
+        @media screen and (max-width: 990px) {
+            margin: 0 auto;
+            padding-bottom: 10%;
+        }
+    }
 }
 
 .beetroot-product {
     position: relative;
     &:hover {
         &::after {
-            display: block;
             content: "";
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 0;
             right: 0;
             background-color: rgba(0, 0, 0, 0.5);
         }
         & .product__details-window {
-            display: block;
         }
     }
 }

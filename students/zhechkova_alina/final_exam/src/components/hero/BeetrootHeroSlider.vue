@@ -42,7 +42,7 @@ export default {
     computed: {
         ...mapGetters(["productList"]),
         getMaxPrice() {
-            return this.productList.filter((product) => product.price > 120);
+            return this.productList.filter((product) => product.price > 150);
         },
     },
     created() {
@@ -60,26 +60,26 @@ export default {
         top: 88%;
         background-color: transparent;
         z-index: 10000;
-    
+
         @media screen and (max-width: 768px) {
-        display:none !important;
-    }
+            display: none !important;
+        }
     }
     .slick-prev {
         left: 95%;
         right: 0;
         @media screen and (max-width: 576px) {
-            left: 80%
+            left: 80%;
         }
     }
-    @media screen and (max-width:768px) {
-       margin-top:0;
+    @media screen and (max-width: 768px) {
+        margin-top: 0;
     }
 }
 .beetroot-hero-slider .slick-list {
     height: calc(100vh - 100px);
-    @media screen and (max-width:768px) {
-        margin-top:50px;
+    @media screen and (max-width: 768px) {
+        margin-top: 50px;
         height: 100vh;
     }
 }
@@ -88,14 +88,15 @@ export default {
     top: 80%;
     left: 10%;
     font-size: 25px;
-    @media screen and (max-width:768px) {
-               top: 17%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 20px;
+    @media screen and (max-width: 768px) {
+        top: 17%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
     }
-    @media screen and (max-width:576px) {
-            top: 16.5%;}
+    @media screen and (max-width: 576px) {
+        top: 16.5%;
+    }
 }
 .current-slide_hero {
     color: #2121ff;

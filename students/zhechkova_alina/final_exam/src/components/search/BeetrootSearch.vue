@@ -1,31 +1,37 @@
 <template>
-    <div class="beetroot-search">
-        <button type="button" class="search__btn" @click="openSearchWindow">
-            <font-awesome-icon icon="search" />
-        </button>
-        <div class="search__window" ref="searchWindow">
-            <button
-                @click="closeSearchWindow"
-                type="button"
-                class="search__close"
-                id="closeSearchWindow"
-            >
-                X
+    <div class="beetroot-search search">
+        <div class="container">
+            <button type="button" class="search__btn" @click="openSearchWindow">
+                <font-awesome-icon icon="search" />
             </button>
-            <h3 class="search__title">Search now</h3>
-            <input
-                type="text"
-                @input="searchForProduct"
-                id="searchInput"
-                class="search__input"
-            />
-            <div class="search__result row">
-                <beetroot-product
-                    v-for="product in foundProduct"
-                    :key="product.id"
-                    :product="product"
-                    class="p-3 col-12 col-md-6"
+            <div class="modal-window search__window" ref="searchWindow">
+                <div class="search__header modal-window__header">
+                    <h3 class="modal-window__title search__title">
+                        Search now
+                    </h3>
+                    <button
+                        @click="closeSearchWindow"
+                        type="button"
+                        class="search__close modal-window__btn"
+                        id="closeSearchWindow"
+                    >
+                        X
+                    </button>
+                </div>
+                <input
+                    type="text"
+                    @input="searchForProduct"
+                    id="searchInput"
+                    class="search__input"
                 />
+                <div class="search__result row">
+                    <beetroot-product
+                        v-for="product in foundProduct"
+                        :key="product.id"
+                        :product="product"
+                        class="p-3 col-12 col-md-6"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -97,7 +103,6 @@ export default {
         pointer-events: none;
         transform: translateX(-2500px);
         transition: transform 0.5s ease;
-        padding: 50px 70px;
         overflow-y: auto;
         &.active {
             visibility: visible;
@@ -106,11 +111,6 @@ export default {
         }
     }
     &__close {
-        position: absolute;
-        right: 30px;
-        background: transparent;
-        border: none;
-        font-size: 20px;
     }
     &__input {
         width: 100%;
@@ -120,14 +120,6 @@ export default {
         font-size: 20px;
     }
     &__title {
-        text-transform: uppercase;
-        color: #2121ff;
-        font-size: 20px;
-        font-weight: bold;
-        text-align: right;
-        position: absolute;
-        right: 72px;
-        top: 65px;
     }
 }
 </style>

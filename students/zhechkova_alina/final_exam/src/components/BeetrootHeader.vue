@@ -158,13 +158,10 @@ export default {
 }
 
 .cart {
-    margin-right: 100px;
 }
 .account {
-    margin-right: 30px;
 }
 .change_color {
-    background-color: red;
 }
 body {
     &.fixed {

@@ -2,9 +2,9 @@
     <section class="beetroot-collections collections">
         <div class="collections__container container">
             <div class="collections__item">
-                <img src="../assets/bg1.jpg" alt="" class="collections__img" />
+                <img src="../assets/bg1.png" alt="" class="collections__img" />
                 <div class="collections__content">
-                    <h3 class="collections__title">Weekender</h3>
+                    <h3 class="collections__title">Nike</h3>
                     <p class="collections__info">
                         Switch it up with
                         <strong>interchangeable</strong> straps.
@@ -15,10 +15,10 @@
                 </div>
             </div>
             <div class="collections__item">
-                <img src="../assets/bg1.jpg" alt="" class="collections__img" />
+                <img src="../assets/bg2.png" alt="" class="collections__img" />
 
                 <div class="collections__content">
-                    <h3 class="collections__title">Timex achive</h3>
+                    <h3 class="collections__title">Adidas achive</h3>
                     <p class="collections__info">
                         Discover our <strong>new capsule</strong> collection
                     </p>
@@ -73,7 +73,6 @@ export default {
         width: 100%;
         object-fit: cover;
         object-position: left;
-        height: 740px;
     }
     &__title {
         text-transform: uppercase;

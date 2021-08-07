@@ -3,7 +3,7 @@
         <div class="container">
             <div class="catalog__content">
                 <h2 class="catalog__title">
-                    <span class="catalog__subtitle">Popular</span> Watches
+                    <span class="catalog__subtitle">Popular</span> Shoes
                 </h2>
                 <router-link to="/all" class="explore__btn details">
                     <span class="details__line explore__span"
@@ -12,7 +12,7 @@
                 >
             </div>
             <div class="slide-count_popular">
-                <span class="current-slide_popular">1</span>5
+                <span class="current-slide_popular">1</span>6
             </div>
             <VueSlickCarousel
                 v-bind="options"
@@ -21,7 +21,7 @@
                 @afterChange="getSliderIndexCatalog"
             >
                 <beetroot-product
-                    v-for="product in productList"
+                    v-for="product in sorted"
                     :key="product.id"
                     :product="product"
                     class="p-3"
@@ -82,11 +82,13 @@ export default {
     },
     computed: {
         ...mapGetters(["productList"]),
+        sorted() {
+            return this.productList.filter((item) => item.price >= 120);
+        },
     },
 
     created() {
         this.setProduct();
-        this.sortByBrand();
     },
 };
 </script>
