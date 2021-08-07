@@ -16,7 +16,6 @@
     "exclude": [
         "static",
         "build",
-        "dist",
         "node_modules"
     ]
 }
