@@ -88,20 +88,22 @@ let playList = [{
 ];
 
 function getText(array) {
-    let text = ``;
-    array.forEach(function (item) {
-        text += `${item.author}: ${item.song} \n`
+    let text = array.map(function (item) {
+        return `<li>${item.author}: ${item.song}</li>`
     })
     return text;
 }
 
 function createPlaylist() {
-    const div = createElem({
-        tagName: 'pre',
+    const ol = createElem({
+        tagName: 'ol',
         classList: 'playlist__content',
-        content: getText(playList),
     });
-    document.getElementById('playlist').append(div);
+    const content = getText(playList);
+    content.forEach(item => {
+        ol.insertAdjacentHTML('beforeend', item)
+    })
+    document.getElementById('playlist').append(ol);
 }
 
 createPlaylist()

@@ -8,3 +8,4 @@ function changeColor() {
     btn.addEventListener('click', light, false)
 }
 changeColor()
+//Не доделана :)
